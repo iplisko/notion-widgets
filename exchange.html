@@ -15,7 +15,7 @@
       <iframe src="https://www.widgets.investing.com/live-currency-cross-rates?theme=lightTheme&cols=last,prev&pairs=9488,1604" width="400" height="250" frameborder="0" allowtransparency="no" marginwidth="0" marginheight="0"></iframe></div>
     </td>
     <td>
-      <iframe src="https://fortraders.org/informers/getInformer?st=1&cat=7&title=%D0%9A%D1%83%D1%80%D1%81%D1%8B%20%D0%B2%D0%B0%D0%BB%D1%8E%D1%82%20%D0%A6%D0%91%20%D0%A0%D0%A4&texts=%7B%22toolTitle%22%3A%22%D0%92%D0%B0%D0%BB%D1%8E%D1%82%D0%B0%22%2C%22todayCourse%22%3A%22RUB%22%7D&mult=0.99&showGetBtn=0&hideHeader=0&hideDate=1&w=400&codes=1&colors=false&items=2%2C30%2C11125&columns=todayCourse&toCur=11111"  width="400" height="500" frameborder="0" allowtransparency="true" marginwidth="0" marginheight="0"></iframe>
+      <iframe id="myIframe" src="https://fortraders.org/informers/getInformer?st=1&cat=7&title=%D0%9A%D1%83%D1%80%D1%81%D1%8B%20%D0%B2%D0%B0%D0%BB%D1%8E%D1%82%20%D0%A6%D0%91%20%D0%A0%D0%A4&texts=%7B%22toolTitle%22%3A%22%D0%92%D0%B0%D0%BB%D1%8E%D1%82%D0%B0%22%2C%22todayCourse%22%3A%22RUB%22%7D&mult=0.99&showGetBtn=0&hideHeader=0&hideDate=1&w=400&codes=1&colors=false&items=2%2C30%2C11125&columns=todayCourse&toCur=11111"  width="400" height="500" frameborder="0" allowtransparency="true" marginwidth="0" marginheight="0"></iframe>
     </td>
     <td>
     <!--
@@ -96,6 +96,12 @@
 </table>
 
 
+<script>
+function refreshIframe() {
+  document.getElementById('myIframe').src = document.getElementById('myIframe').src;
+}
 
+setInterval(refreshIframe, 5000); // Refresh every 5 seconds
+</script>
 </body>
 </html>
